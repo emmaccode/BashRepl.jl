@@ -1,5 +1,6 @@
 module UnixRepl
 using ReplMaker
+using ReplMaker: initrepl, active_repl
 function parse_command(s)
     dims = split(s, " ")
     command = dims[1]
