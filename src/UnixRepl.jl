@@ -7,6 +7,7 @@ Base.atreplinit() do repl
     repl.interface = REPL.setup_interface(repl)
     repl.interface.modes[1].prompt =
                  Pkg.REPLMode.promptf()[1:end-6] * " julia> "
+end
 function parse_command(s)
     dims = split(s, " ")
     command = dims[1]
