@@ -1,0 +1,7 @@
+name = "UnixRepl"
+uuid = "a8f7e77f-cb93-4996-b00f-1976032c8702"
+authors = ["emmett boudreau"]
+version = "0.1.0"
+
+[deps]
+ReplMaker = "b873ce64-0db9-51f5-a568-4457d8e49576"
