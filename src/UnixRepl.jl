@@ -1,8 +1,5 @@
 module UnixRepl
 using ReplMaker
-import Base: active_repl
-import REPL
-import Pkg
 Base.atreplinit() do repl
     repl.interface = REPL.setup_interface(repl)
     repl.interface.modes[1].prompt =
@@ -28,9 +25,18 @@ function parse_command(s)
         end
     end
 end
-initrepl(parse_command,
-    prompt_text="bash> ",
-    prompt_color = :yellow,
-    start_key='[',
-    mode_name="bash")
+atreplinit() do repl
+    try
+        @eval using ReplMaker
+        @async initrepl(
+            parse_command;
+            prompt_text="bash> ",
+            prompt_color=:yellow,
+            start_key='[',
+            mode_name="Bash"
+        )
+        catch
+        end
+    end
+end
 end
