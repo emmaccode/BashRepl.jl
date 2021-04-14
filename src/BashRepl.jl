@@ -24,6 +24,7 @@ end
 function install()
     Pkg.add("ReplMaker")
     home = homedir()
+    mkdir(string(home,"/.julia/config"))
     startup = string(home, "/.julia/config/startup.jl")
     touch(startup)
     open(startup, "w") do io
