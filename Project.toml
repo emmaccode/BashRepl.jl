@@ -1,7 +1,7 @@
-name = "UnixRepl"
-uuid = "a8f7e77f-cb93-4996-b00f-1976032c8702"
-authors = ["emmett boudreau"]
+name = "BashRepl"
+uuid = "e57dfe2b-0381-4277-861a-303ffd28229e"
+authors = ["emmett-boudreau "]
 version = "0.1.0"
 
 [deps]
-ReplMaker = "b873ce64-0db9-51f5-a568-4457d8e49576"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
