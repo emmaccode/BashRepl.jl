@@ -25,7 +25,6 @@ function parse_command(s)
         end
     end
 end
-        @eval using ReplMaker
         @async initrepl(
             parse_command;
             prompt_text="bash> ",
