@@ -25,7 +25,7 @@ function parse_command(s)
         end
     end
 end
-        @async initrepl(
+        initrepl(
             parse_command;
             prompt_text="bash> ",
             prompt_color=:yellow,
