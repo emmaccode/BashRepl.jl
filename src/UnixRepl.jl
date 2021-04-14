@@ -25,8 +25,6 @@ function parse_command(s)
         end
     end
 end
-atreplinit() do repl
-    try
         @eval using ReplMaker
         @async initrepl(
             parse_command;
@@ -35,7 +33,4 @@ atreplinit() do repl
             start_key='[',
             mode_name="Bash"
         )
-        catch
-    end
-    end
 end
