@@ -24,12 +24,13 @@ end
 function install()
     Pkg.add("ReplMaker")
     home = homedir()
-    try
-        mkdir(string(home,"/.julia/config"))
-    catch
-    end
     startup = string(home, "/.julia/config/startup.jl")
-    touch(startup)
+    try
+        touch(startup)
+    catch
+        mkdir(string(home,"/.julia/config"))
+        touch(startup)
+    end
     open(startup, "w") do io
         write(io, "# BashRepl (programmed by emmett boudreau)\n")
         write(io, "\n")
