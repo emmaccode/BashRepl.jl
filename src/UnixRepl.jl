@@ -36,7 +36,6 @@ atreplinit() do repl
             mode_name="Bash"
         )
         catch
-        end
     end
-end
+    end
 end
