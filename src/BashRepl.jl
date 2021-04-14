@@ -39,7 +39,7 @@ function install()
                write(io, "prompt_text=\"bash\",\n")
                write(io, "promp_color = :yellow,\n")
                write(io, "start_key = '[',\n")
-               write(io, "mode_name = Bash Mode);")
+               write(io, "mode_name = \"Bash Mode\");")
                write(io, "catch\n end\n end\n")
 
     end;
